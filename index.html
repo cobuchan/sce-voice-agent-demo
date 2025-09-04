@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searing Camp & Electric — Voice Agent Demo</title>
+    <meta name="description" content="We answer + book after hours so you don't lose jobs. After-hours voice receptionist for contractors.">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Searing Camp & Electric — Voice Agent Demo">
+    <meta property="og:description" content="We answer + book after hours so you don't lose jobs. After-hours voice receptionist for contractors.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- Favicon placeholder -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Custom CSS for accordion functionality */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-toggle:checked + .accordion-label + .accordion-content {
+            max-height: 200px;
+        }
+        
+        .accordion-toggle:checked + .accordion-label .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Header (Sticky) -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="flex items-center justify-between h-16">
+                <!-- Left: SCE logo -->
+                <div class="flex items-center">
+                    <img src="sce-logo.png" alt="Searing Camp & Electric" class="h-10 w-auto">
+                </div>
+                
+                <!-- Right: Call to Test AI button -->
+                <a href="tel:+15418713651" 
+                   class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-2xl font-semibold shadow-md transition-colors duration-200 text-center min-w-[160px]">
+                    Call to Test the AI
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-12 lg:py-20 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Content -->
+                <div class="space-y-8">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        After-Hours Voice Receptionist for Contractors.
+                    </h1>
+                    
+                    <p class="text-xl lg:text-2xl text-gray-600 leading-relaxed">
+                        We answer + book after hours so you don't lose jobs.
+                    </p>
+                    
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="tel:+15418713651" 
+                           class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg transition-colors duration-200 text-center">
+                            Call to Test the AI
+                        </a>
+                        
+                        <a href="#book" 
+                           class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg transition-colors duration-200 text-center">
+                            Book a 10-min walkthrough
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right: YouTube embed -->
+                <div class="w-full">
+                    <div class="aspect-video bg-gray-200 rounded-2xl overflow-hidden shadow-lg">
+                        <iframe 
+                            src="https://www.youtube.com/embed/_apk7aQLOe4" 
+                            title="Searing Camp & Electric Voice Agent Demo"
+                            allowfullscreen
+                            class="w-full h-full">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Why Contractors Choose Our AI Receptionist
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Never miss another opportunity with our intelligent after-hours voice agent
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-blue-50 p-8 rounded-2xl shadow-sm border border-blue-100">
+                    <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">📞</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Never Miss Calls</h3>
+                    <p class="text-gray-600">24/7 availability ensures every potential customer gets answered, even during your off-hours.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-green-50 p-8 rounded-2xl shadow-sm border border-green-100">
+                    <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">📅</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Instant Appointment Booking</h3>
+                    <p class="text-gray-600">Directly books appointments to your calendar, eliminating the back-and-forth of scheduling.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-purple-50 p-8 rounded-2xl shadow-sm border border-purple-100">
+                    <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">⏰</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">After-Hours + Overflow</h3>
+                    <p class="text-gray-600">Handles calls when you're busy or unavailable, ensuring no customer goes unanswered.</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="bg-orange-50 p-8 rounded-2xl shadow-sm border border-orange-100">
+                    <div class="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">🎯</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Consistent Professional Intake</h3>
+                    <p class="text-gray-600">Every caller receives the same high-quality, professional experience and information collection.</p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="bg-red-50 p-8 rounded-2xl shadow-sm border border-red-100">
+                    <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">👥</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Handles Multiple Callers</h3>
+                    <p class="text-gray-600">No busy signals or missed calls - our AI can handle multiple conversations simultaneously.</p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="bg-indigo-50 p-8 rounded-2xl shadow-sm border border-indigo-100">
+                    <div class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">🌍</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Bilingual Support</h3>
+                    <p class="text-gray-600">Optional Spanish language support to serve a broader customer base effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    The Cost of Missed Calls
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="text-4xl font-bold text-red-600 mb-2">~85%</div>
+                    <p class="text-lg text-gray-700">of missed callers don't call back*</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="text-4xl font-bold text-orange-600 mb-2">~80%</div>
+                    <p class="text-lg text-gray-700">of voicemail callers don't leave a message*</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">~6%</div>
+                    <p class="text-lg text-gray-700">of new inquiries arrive after hours*</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    How It Works
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Simple 3-step process to capture every lead
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Caller Reaches AI</h3>
+                    <p class="text-gray-600">Your custom greeting welcomes callers and explains they're speaking with your AI receptionist.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Collect Information</h3>
+                    <p class="text-gray-600">Agent gathers name, callback number, address, and brief description of the issue or service needed.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Book or Message</h3>
+                    <p class="text-gray-600">Books directly to your calendar or captures a detailed message, tagging urgent items for priority follow-up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini-FAQ Section -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    FAQ — Straight Answers for Contractors
+                </h2>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq1" class="accordion-toggle hidden">
+                    <label for="faq1" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">Will my customers even talk to an AI, or will they hang up?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            Most callers can't tell it's an AI. They hear a clear, professional voice that asks for their name, number, and the issue. It feels like talking to a receptionist. The voice agent will introduce itself and mention it is AI as well. The key is that they reached someone instead of voicemail — and research shows most people won't leave a message.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq2" class="accordion-toggle hidden">
+                    <label for="faq2" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">What if the AI messes up or doesn't understand?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            The agent is trained only on simple tasks: greeting, collecting contact info, and booking. If it's unsure, it doesn't guess — it politely asks again or captures a message for you. We can always update the knowledge base with services offered, etc - the agent can be trained on everything you want it to know and how to relay that knowledge to your customers.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq3" class="accordion-toggle hidden">
+                    <label for="faq3" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">Does this mean I'll stop answering my own phone?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            No. This is after-hours and backup only. During the day, your phone rings like normal, and if you choose, you can have AI pickup when you cannot. The AI only covers times when you can't.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq4" class="accordion-toggle hidden">
+                    <label for="faq4" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">Will it cost me jobs if customers expect an estimate on the spot?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            No, because it never quotes prices or diagnoses problems. It's designed to protect jobs you'd otherwise lose to voicemail. It captures the lead, books an appointment, and makes sure you have their info so you can follow up personally.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq5" class="accordion-toggle hidden">
+                    <label for="faq5" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">I'm in a small town — people expect a personal touch. Won't this feel impersonal?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            Actually, it's the opposite. Instead of callers getting no answer or voicemail, they get an immediate response every time, with your business name and greeting. That feels more professional and reliable.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq6" class="accordion-toggle hidden">
+                    <label for="faq6" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">What if two or three people call at once?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            Unlike a cell phone, the AI can handle multiple calls at the same time. Nobody gets a busy signal.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 7 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq7" class="accordion-toggle hidden">
+                    <label for="faq7" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">How do I know the AI won't say something wrong or promise work I don't do?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            You set the rules up front: what services are in-scope, what's urgent, what can be booked. The AI sticks to those rules only.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 8 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq8" class="accordion-toggle hidden">
+                    <label for="faq8" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">I don't want to get stuck paying for texts or hidden extras. How does billing work?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            This demo is voice only. No SMS, no upsells, no hidden carrier fees. You pay for the line and usage, and that's it.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 9 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq9" class="accordion-toggle hidden">
+                    <label for="faq9" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">Will it record my customers without their consent?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            Calls start with a simple notice: "This call may be recorded for quality and training." That keeps you compliant and transparent.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 10 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq10" class="accordion-toggle hidden">
+                    <label for="faq10" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">Why not just hire an answering service instead of AI?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            Answering services are often expensive, limited to one call at a time, and can mishear details. The AI is cheaper, always available, and scales without extra headcount.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 11 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <input type="checkbox" id="faq11" class="accordion-toggle hidden">
+                    <label for="faq11" class="accordion-label flex items-center justify-between p-6 cursor-pointer">
+                        <span class="text-lg font-semibold text-gray-900">How do I try it without risk?</span>
+                        <span class="accordion-icon text-gray-500 text-2xl transition-transform duration-300">+</span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-gray-600">
+                            Call the demo line: (541) 871-3651 and see for yourself. If you'd like a quick walkthrough, book a time on my Google Calendar.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="py-16 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Book a 10-min Walkthrough
+                </h2>
+                <p class="text-xl text-gray-600">
+                    See how our AI receptionist can work for your business
+                </p>
+            </div>
+            
+            <!-- Google Calendar Booking -->
+            <div class="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-200 mb-8">
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl">📅</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Schedule Your Demo</h3>
+                    <p class="text-gray-600">Click below to book a 10-minute walkthrough of our AI receptionist</p>
+                </div>
+                
+                <!-- Primary booking button -->
+                <div class="text-center mb-4">
+                    <a href="https://calendar.app.google/6SJPzb5riNTKFrTB7" 
+                       target="_blank"
+                       class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg transition-colors duration-200 inline-block">
+                        📅 Book 10-Min Demo
+                    </a>
+                </div>
+                
+                <!-- Alternative link -->
+                <div class="text-center">
+                    <a href="https://calendar.app.google/6SJPzb5riNTKFrTB7" 
+                       target="_blank"
+                       class="text-blue-600 hover:text-blue-700 underline">
+                        Open booking page in new tab
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Call button -->
+            <div class="text-center">
+                <a href="tel:+15418713651" 
+                   class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg transition-colors duration-200 inline-block">
+                    Or Call to Test the AI Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Note -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <p class="text-sm text-gray-500 text-center">
+                This call may be recorded for quality and training.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="text-center">
+                <div class="mb-4">
+                    <img src="sce-logo.png" alt="Searing Camp & Electric" class="h-12 w-auto mx-auto">
+                </div>
+                <p class="text-lg text-gray-300 mb-4">
+                    La Pine, OR
+                </p>
+                <div class="space-y-2">
+                    <a href="tel:+15415272604" 
+                       class="block text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                        (541) 527-2604
+                    </a>
+                    <a href="mailto:jacobsearing@me.com" 
+                       class="block text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                        jacobsearing@me.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Stats Footnotes -->
+    <div class="bg-gray-50 py-4">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <p class="text-xs text-gray-500 text-center">
+                * Statistics based on industry research and call center studies
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
